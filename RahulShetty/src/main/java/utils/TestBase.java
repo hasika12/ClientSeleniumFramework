@@ -13,6 +13,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class TestBase {
 	
+	
+	
 	Properties prop = new Properties();
 	public static WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
