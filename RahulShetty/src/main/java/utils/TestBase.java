@@ -14,12 +14,12 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class TestBase {
 	
 	Properties prop = new Properties();
-	public WebDriver driver;
+	public static WebDriver driver;
 	String projectPath = System.getProperty("user.dir");
 	
 	public WebDriver initializeDriver() throws Exception
 	{
-		FileInputStream fis = new FileInputStream("F:\\Maestrano-WorkPlace\\RahulShetty\\src\\main\\java\\utils\\data.properties");
+		FileInputStream fis = new FileInputStream(projectPath+"src\\main\\java\\utils\\data.properties");
 		
 		prop.load(fis);
 		
