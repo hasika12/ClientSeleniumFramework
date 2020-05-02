@@ -5,7 +5,9 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class LoginPage {
+import utils.TestBase;
+
+public class LoginPage extends TestBase {
 	
 	@FindBy(how=How.XPATH, using="//input[@name='email']")
 	@CacheLookup
@@ -30,5 +32,10 @@ public class LoginPage {
 	
 	@FindBy(how=How.XPATH, using="//a[contains(text(),'Sign')]")
 	public WebElement lnkSignUp;
+	
+	public LoginPage()
+	{
+		this.driver=driver;
+	}
 
 }
